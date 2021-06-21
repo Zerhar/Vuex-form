@@ -1,12 +1,7 @@
 <template>
   <div class="">
-    <label
-      class=""
-      v-text="label"
-      />
     <div class="">
       <select
-        id="grid-state"
         class=""
         @change="changeSelect($event.target.value)"
       >

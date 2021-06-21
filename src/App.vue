@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10">
+  <div class="container">
     <add-user />
     <user-list />
   </div>

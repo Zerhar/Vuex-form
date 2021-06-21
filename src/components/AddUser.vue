@@ -2,25 +2,14 @@
   <form class="">
     <div class="">
       <div class="">
-        <label
-          class=""
-          for="grid-first-name"
-          v-text="'First Name'"
-        />
         <input
           class=""
-          id="grid-first-name"
           type="text"
           placeholder="Enter First Name"
           v-model="user.firstName"
         />
       </div>
       <div class="">
-        <label
-          class=""
-          for="grid-last-name"
-          v-text="'Last Name'"
-        />
         <input
           class=""
           id="grid-last-name"
@@ -30,27 +19,16 @@
         />
       </div>
       <div class="">
-        <label
-          class=""
-          for="grid-date"
-          v-text="'Date of Birth'"
-        />
         <input
           class=""
-          id="grid-date"
+          placeholder="Enter birth date"
           type="date"
           v-model="user.birthDate"
         />
       </div>
       <div class="">
-        <label
-          class=""
-          for="grid-quote"
-          v-text="'Favorite Quote'"
-        />
         <input
           class=""
-          id="grid-quote"
           type="text"
           placeholder="Enter Quote"
           v-model="user.quote"
@@ -132,4 +110,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>
