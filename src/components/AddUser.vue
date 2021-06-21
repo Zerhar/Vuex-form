@@ -1,55 +1,55 @@
 <template>
-  <form class="md:w-8/12 mx-auto my-10">
-    <div class="flex flex-wrap -mx-3 mb-6">
-      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+  <form class="">
+    <div class="">
+      <div class="">
         <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          class=""
           for="grid-first-name"
           v-text="'First Name'"
         />
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+          class=""
           id="grid-first-name"
           type="text"
           placeholder="Enter First Name"
           v-model="user.firstName"
         />
       </div>
-      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <div class="">
         <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          class=""
           for="grid-last-name"
           v-text="'Last Name'"
         />
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+          class=""
           id="grid-last-name"
           type="text"
           placeholder="Enter Last Name"
           v-model="user.lastName"
         />
       </div>
-      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <div class="">
         <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          class=""
           for="grid-date"
           v-text="'Date of Birth'"
         />
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+          class=""
           id="grid-date"
           type="date"
           v-model="user.birthDate"
         />
       </div>
-      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+      <div class="">
         <label
-          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          class=""
           for="grid-quote"
           v-text="'Favorite Quote'"
         />
         <input
-          class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+          class=""
           id="grid-quote"
           type="text"
           placeholder="Enter Quote"
@@ -67,7 +67,7 @@
         :label="'Country'"
       />
     </div>
-    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" @click.prevent="addUser">
+    <button class="" @click.prevent="addUser">
       Save User
     </button>
   </form>
@@ -85,7 +85,7 @@ export default {
         firstName: '',
         lastName: '',
         birthDate: null,
-        quote: '', 
+        quote: '',
         profession_id: 1,
         country_id: 1
       },

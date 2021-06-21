@@ -1,32 +1,32 @@
 <template>
-  <table class="table-auto mx-auto my-10">
+  <table class="">
     <thead>
       <th
-        class="px-4 py-2"
+        class=""
         v-text="'Namn'"
       />
       <th
-        class="px-4 py-2"
+        class=""
         v-text="'Date of Birth'"
       />
       <th
-        class="px-4 py-2"
+        class=""
         v-text="'Age'"
       />
       <th
-        class="px-4 py-2"
+        class=""
         v-text="'Profession'"
       />
       <th
-        class="px-4 py-2"
+        class=""
         v-text="'Country'"
       />
       <th
-        class="px-4 py-2"
+        class=""
         v-text="'Favorite Quote'"
       />
       <th
-        class="px-4 py-2"
+        class=""
         v-text="''"
       />
     </thead>
@@ -36,34 +36,34 @@
         :key="key"
       >
         <td
-          class="border px-4 py-2"
+          class=""
           v-text="user.firstName + ' ' + user.lastName"
         />
         <td
-          class="border px-4 py-2"
+          class=""
           v-text="user.birthDate"
         />
         <td
-          class="border px-4 py-2"
+          class=""
           v-text="userAge(user)"
         />
         <td
-          class="border px-4 py-2"
+          class=""
           v-text="getProfession(user.profession_id)"
         />
         <td
-          class="border px-4 py-2"
+          class=""
           v-text="getCountry(user.country_id)"
         />
         <td
-          class="border px-4 py-2"
+          class=""
           v-text="user.quote"
         />
         <td
-          class="px-4 py-2"
+          class=""
         >
           <button
-            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+            class=""
             @click="removeRow(user)"
           >
             Remove
