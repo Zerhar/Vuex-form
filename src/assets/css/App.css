@@ -14,41 +14,34 @@ body {
 form {
     background: rgba(255, 255, 255, 0.3);
     padding: 3em;
-    border-radius: 20px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
     text-align: center;
     position: relative;
-    transition: all 0.2s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
 }
 
-form p {
-    font-weight: 500;
-    color: #fff;
-    opacity: 0.7;
-    font-size: 1.4rem;
-    margin-top: 0;
-    margin-bottom: 60px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+form div {
+    justify-self: start;
 }
 
 form input, form select, form button {
     background: transparent;
-    width: 200px;
+    width: 12em;
+    height: 2em;
     padding: 1em;
-    margin-bottom: 2em;
     border: none;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5000px;
+    border-radius: 1em;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
     color: #fff;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
-    transition: all 0.2s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     -ms-box-sizing:content-box;
     -moz-box-sizing:content-box;
@@ -56,7 +49,7 @@ form input, form select, form button {
     -webkit-box-sizing:content-box;
 }
 
-form input:hover {
+form input:hover, form input[type="date"]:hover, form select:hover, form button:hover {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
@@ -68,21 +61,16 @@ form input[type="text"]:focus, form input[type="date"]:focus {
 }
 
 form button {
-    width: 150px;
-    margin-bottom: 0rem;
-    font-size: 1rem;
+    background: rgb(255, 255, 255, 0.6);
 }
 
 form button:hover {
+    background: rgb(255, 255, 255, 0.1);
     cursor: pointer;
 }
 
 form button:active {
     background: rgba(255, 255, 255, 0.2);
-}
-
-form:hover {
-    margin: 4px;
 }
 
 ::placeholder {

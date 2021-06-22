@@ -1,53 +1,54 @@
 <template>
   <form class="">
     <div class="">
-      <div class="">
-        <input
-          class=""
-          type="text"
-          placeholder="Enter First Name"
-          v-model="user.firstName"
-        />
-      </div>
-      <div class="">
-        <input
-          class=""
-          id="grid-last-name"
-          type="text"
-          placeholder="Enter Last Name"
-          v-model="user.lastName"
-        />
-      </div>
-      <div class="">
-        <input
-          class=""
-          placeholder="Enter birth date"
-          type="date"
-          v-model="user.birthDate"
-        />
-      </div>
-      <div class="">
-        <input
-          class=""
-          type="text"
-          placeholder="Enter Quote"
-          v-model="user.quote"
-        />
-      </div>
-      <drop-down
-        :options="professions"
-        :changeSelect="setProfession"
-        :label="'Profession'"
-      />
-      <drop-down
-        :options="countries"
-        :changeSelect="setCountry"
-        :label="'Country'"
+      <input
+        class=""
+        type="text"
+        placeholder="Enter First Name"
+        v-model="user.firstName"
       />
     </div>
-    <button class="" @click.prevent="addUser">
-      Save User
-    </button>
+    <div class="">
+      <input
+        class=""
+        id="grid-last-name"
+        type="text"
+        placeholder="Enter Last Name"
+        v-model="user.lastName"
+      />
+    </div>
+    <div class="">
+      <input
+        class=""
+        placeholder="Enter birth date"
+        type="date"
+        v-model="user.birthDate"
+      />
+    </div>
+    <div class="">
+      <input
+        class=""
+        type="text"
+        placeholder="Enter Quote"
+        v-model="user.quote"
+      />
+    </div>
+    <drop-down
+      :options="professions"
+      :changeSelect="setProfession"
+      :label="'Profession'"
+    />
+    <drop-down
+      :options="countries"
+      :changeSelect="setCountry"
+      :label="'Country'"
+    />
+    <div></div>
+    <div>
+      <button class="" @click.prevent="addUser">
+        Save User
+      </button>
+    </div>
   </form>
 </template>
 
