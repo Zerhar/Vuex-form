@@ -6,14 +6,22 @@
     <div
         class="modal-content"
     >
-        <span
-            @click="close"
-            class="close"
+        <div
+            class="modal-header"
         >
-            &times;
-        </span>
-        <div>
-            {{ alertText }}
+            <span
+                @click="close"
+                class="close"
+            >
+                &times;
+            </span>
+        </div>
+        <div class="">
+            <div
+                class="modal-body"
+            >
+                {{ alertText }}
+            </div>
         </div>
     </div>
   </div>

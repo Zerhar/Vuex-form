@@ -154,13 +154,33 @@ form button:active {
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal div {
+.modal-content {
+    position: relative;
     background-color: #fefefe;
     color: #464646;
     margin: auto;
     padding: 1em;
     max-width: 30em;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-30em; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-30em; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-body {
+    padding: 2em;
 }
 
 .close {
