@@ -33,9 +33,7 @@ export default {
     },
     changeSelect: {
       type: Function,
-      default: () => {
-
-      },
+      default: () => {},
     },
   },
 }

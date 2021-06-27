@@ -1,12 +1,14 @@
 import { createStore } from 'vuex';
-import userModule from './user';
 import countryModule from './country';
 import professionModule from './profession';
+import modalModule from './modal';
+import userModule from './user';
 
 export default createStore({
   modules: {
-    userModule,
     countryModule,
+    modalModule,
     professionModule,
+    userModule,
   },
 })

@@ -17,8 +17,8 @@
     <div>
       <input
         placeholder="Enter birth date"
-        type="text"
-        onfocus="(this.type='date')"
+        :type="type"
+        @focus="changeType"
         v-model="user.birthDate"
       />
     </div>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapMutations } from 'vuex';
 import DropDown from './DropDown';
 
 export default {
@@ -64,6 +64,7 @@ export default {
         profession_id: 1,
         country_id: 1
       },
+      type: 'text',
     };
   },
   components: {
@@ -76,16 +77,29 @@ export default {
     })
   },
   methods: {
-    ...mapActions(["addNewUser"]),
+    ...mapActions([
+      "addNewUser",
+      "setModalBox",
+      ]),
+    ...mapMutations({
+      setAlertText: "SET_ALERT_TEXT",
+      }),
+    changeType() {
+      this.type = 'date';
+    },
     addUser() {
+      let alertText = '';
+      let showModal = true;
       if ((this.user.firstName.length === 0) || (this.user.lastName.length === 0)) {
-        alert("Whooooooooooooooooooooo are you? WHO? WHO?... WHO? WHO?...");
+          alertText = "Whooooooooooooooooooooo are you? WHO? WHO?... WHO? WHO?...";
       } else if (!this.user.birthDate || (new Date(this.user.birthDate).getTime() > new Date().getTime())) {
-        alert("What's wrong with your birthday, brah?");
+          alertText = "What's wrong with your birthday, brah?";
       } else if (this.user.quote.length === 0) {
-        alert("Forgetting something?");
+          alertText = "Forgetting something?";
       } else {
         this.$store.dispatch("addNewUser", this.user);
+        showModal = false;
+        this.type = 'text';
         this.user = {
           firstName: '',
           lastName: '',
@@ -95,6 +109,7 @@ export default {
           country_id: 1
         };
       }
+      this.setModalBox({alertText, showModal});
     },
     setProfession(id) {
       this.user.profession_id = parseInt(id) + 1;
