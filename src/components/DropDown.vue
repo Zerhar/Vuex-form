@@ -1,8 +1,7 @@
 <template>
-  <div class="">
-    <div class="">
+  <div>
+    <div>
       <select
-        class=""
         @change="changeSelect($event.target.value)"
       >
         <option

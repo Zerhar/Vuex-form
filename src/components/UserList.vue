@@ -1,32 +1,25 @@
 <template>
-  <table class="">
+  <table>
     <thead>
       <th
-        class=""
         v-text="'Namn'"
       />
       <th
-        class=""
         v-text="'Date of Birth'"
       />
       <th
-        class=""
         v-text="'Age'"
       />
       <th
-        class=""
         v-text="'Profession'"
       />
       <th
-        class=""
         v-text="'Country'"
       />
       <th
-        class=""
         v-text="'Favorite Quote'"
       />
       <th
-        class=""
         v-text="''"
       />
     </thead>
@@ -36,38 +29,27 @@
         :key="key"
       >
         <td
-          class=""
           v-text="user.firstName + ' ' + user.lastName"
         />
         <td
-          class=""
           v-text="user.birthDate"
         />
         <td
-          class=""
           v-text="userAge(user)"
         />
         <td
-          class=""
           v-text="getProfession(user.profession_id)"
         />
         <td
-          class=""
           v-text="getCountry(user.country_id)"
         />
         <td
-          class=""
           v-text="user.quote"
         />
         <td
-          class=""
+          @click="removeRow(user)"
         >
-          <button
-            class=""
-            @click="removeRow(user)"
-          >
-            Remove
-          </button>
+          Remove
         </td>
       </tr>
     </tbody>

@@ -1,33 +1,29 @@
 <template>
-  <form class="">
-    <div class="">
+  <form>
+    <div>
       <input
-        class=""
         type="text"
         placeholder="Enter First Name"
         v-model="user.firstName"
       />
     </div>
-    <div class="">
+    <div>
       <input
-        class=""
-        id="grid-last-name"
         type="text"
         placeholder="Enter Last Name"
         v-model="user.lastName"
       />
     </div>
-    <div class="">
+    <div>
       <input
-        class=""
         placeholder="Enter birth date"
-        type="date"
+        type="text"
+        onfocus="(this.type='date')"
         v-model="user.birthDate"
       />
     </div>
-    <div class="">
+    <div>
       <input
-        class=""
         type="text"
         placeholder="Enter Quote"
         v-model="user.quote"
@@ -45,7 +41,7 @@
     />
     <div></div>
     <div>
-      <button class="" @click.prevent="addUser">
+      <button @click.prevent="addUser">
         Save User
       </button>
     </div>

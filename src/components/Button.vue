@@ -1,6 +1,5 @@
 <template>
   <button
-    class=""
     v-text="buttonText"
     @click.prevent="onClick()"
   />
