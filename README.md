@@ -1,5 +1,9 @@
 # vuex-form
 
+### Demo
+
+https://zerhar.github.io/vuex-form/
+
 ## Project setup
 ```
 npm install
